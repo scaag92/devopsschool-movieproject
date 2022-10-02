@@ -1,10 +1,10 @@
-## DevOps School - Movie Project 
+# DevOps School - Movie Project 
 
-# - Requirementes:
+## - Requirementes:
   . Vagrant 2.2.19
   . Virtual Box 6.0 or Above
 
-# - Follow this steps:
+## - Follow this steps:
   . Clone this repo.
   . Run the following command:
      ./startup.sh
