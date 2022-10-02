@@ -1,10 +1,10 @@
 # DevOps School - Movie Project 
 
- - Requirementes:
+## - Requirementes:
  ######      - Vagrant 2.2.19
  ######      - Virtual Box 6.0 or Above
 
- - Follow this steps:
+## - Follow this steps:
 ######      - Clone this repo.
 ######      - Move to the project folder.
 ######      - Run the following command:
