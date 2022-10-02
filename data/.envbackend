@@ -1,0 +1,5 @@
+DB_HOST=db_host
+DB_USER=applicationuser
+DB_PASS=applicationuser
+DB_NAME=movie_db
+PORT=3000

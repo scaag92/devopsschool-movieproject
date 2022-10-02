@@ -1,0 +1,4 @@
+vagrant up
+vagrant ssh vm1 -- -t 'cd /vagrant_data && docker stack deploy --compose-file docker-compose.yml app; /bin/bash'
+exit
+

@@ -1,0 +1,44 @@
+version: '3.7'
+services:
+  frontend:
+    container_name: frontend
+    image: frontend:schooldevops
+    deploy:
+      replicas: 2
+    ports:
+      - "8080:3030"
+    environment:
+      - "BACKEND_URL=backend:3000"
+    networks:
+      - env
+  backend:
+    container_name: backend
+    image: backend:schooldevops 
+    deploy:
+      replicas: 4
+    ports:
+      - "3000:3000"
+    environment:
+      - "DB_HOST=db_host"
+      - "DB_USER=applicationuser"
+      - "DB_PASS=applicationuser"
+      - "DB_NAME=movie_db"
+    networks:
+      - env
+  db_host:
+    container_name: db_host
+    image: mysql
+    deploy:
+      replicas: 2
+    ports:
+      - "3306:3306"
+    environment:
+      - "MYSQL_DATABASE=movie_db"
+      - "MYSQL_USER=applicationuser"
+      - "MYSQL_ROOT_PASSWORD=applicationuser"
+      - "MYSQL_PASSWORD=applicationuser"
+    networks:
+      - env
+
+networks:
+  env:
